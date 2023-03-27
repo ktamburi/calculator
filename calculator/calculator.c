@@ -5,6 +5,7 @@
 
 void sum();
 void substraction();
+void multiplication();
 int main()
 {
     char operation;
@@ -24,6 +25,9 @@ int main()
     else if(symbol==45){
         substraction();
     }
+    else if(symbol==42){
+        multiplication();
+    }
     printf("\nThank you for using this calculator!");
     return 0;
 }
@@ -38,3 +42,8 @@ void substraction(){
     scanf("%lf%lf",&x,&y);
     printf("\nThe substraction of %.1lf - %.1lf is %.1lf",x,y,x-y);
     printf("\nand the substraction of %.1lf - %.1lf is %.1lf\n",y,x,y-x);}
+void multiplication(){
+    double x,y;
+    printf("\nInsert your numbers:");
+    scanf("%lf%lf",&x,&y);
+        printf("\nThe multiplication of %.1lf * %.1lf is %.1lf\n",x,y,x*y);}
