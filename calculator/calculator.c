@@ -21,13 +21,16 @@ int main()
     int symbol=operation;
     if (symbol==43){
         sum();
-    }
+        }
     else if(symbol==45){
         substraction();
-    }
+        }
     else if(symbol==42){
         multiplication();
-    }
+        }
+    else if(symbol==47){
+        division();
+        }
     printf("\nThank you for using this calculator!");
     return 0;
 }
@@ -47,3 +50,9 @@ void multiplication(){
     printf("\nInsert your numbers:");
     scanf("%lf%lf",&x,&y);
         printf("\nThe multiplication of %.1lf * %.1lf is %.1lf\n",x,y,x*y);}
+void division(){
+    double x,y;
+    printf("\nInsert your numbers:");
+    scanf("%lf%lf",&x,&y);
+    printf("\nThe division of %.1lf / %.1lf is %.1lf",x,y,x/y);
+    printf("\nand the division of %.1lf / %.1lf is %.1lf\n",y,x,y/x);}
