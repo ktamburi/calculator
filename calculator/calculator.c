@@ -4,6 +4,7 @@
 #include <string.h>
 
 void sum();
+void substraction();
 int main()
 {
     char operation;
@@ -20,6 +21,9 @@ int main()
     if (symbol==43){
         sum();
     }
+    else if(symbol==45){
+        substraction();
+    }
     printf("\nThank you for using this calculator!");
     return 0;
 }
@@ -28,3 +32,9 @@ void sum(){
     printf("\nInsert your numbers:");
     scanf("%lf%lf",&x,&y);
     printf("\nThe sum of %.1lf + %.1lf is %.1lf\n",x,y,x+y);}
+void substraction(){
+    double x,y;
+    printf("\nInsert your numbers:");
+    scanf("%lf%lf",&x,&y);
+    printf("\nThe substraction of %.1lf - %.1lf is %.1lf",x,y,x-y);
+    printf("\nand the substraction of %.1lf - %.1lf is %.1lf\n",y,x,y-x);}
