@@ -60,6 +60,7 @@ int main()
     printf("\nIf you want to continue to use the calculator insert 0 otherwise press any number: ");
     scanf("%d",&decision);
     }
+    printf("Thank you for using this calculator!");
     return 0;
 }
 
