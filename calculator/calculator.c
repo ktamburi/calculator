@@ -8,6 +8,7 @@ void substraction();
 void multiplication();
 void division();
 void s_root();
+void power();
 int main()
 {
     char operation;
@@ -36,6 +37,9 @@ int main()
     else if(symbol==115){
         s_root();
         }
+    else if(symbol==94){
+        power();
+        }
     printf("\nThank you for using this calculator!");
     return 0;
 }
@@ -54,7 +58,7 @@ void multiplication(){
     double x,y;
     printf("\nInsert your numbers:");
     scanf("%lf%lf",&x,&y);
-        printf("\nThe multiplication of %.1lf * %.1lf is %.1lf\n",x,y,x*y);}
+    printf("\nThe multiplication of %.1lf * %.1lf is %.1lf\n",x,y,x*y);}
 void division(){
     double x,y;
     printf("\nInsert your numbers:");
@@ -62,8 +66,12 @@ void division(){
     printf("\nThe division of %.1lf / %.1lf is %.1lf",x,y,x/y);
     printf("\nand the division of %.1lf / %.1lf is %.1lf\n",y,x,y/x);}
 void s_root(){
-        double x;
-        printf("\nInsert your number: ");
-        scanf("%lf",&x);
-        printf("\nThe square root of %.1lf is %.1lf\n",x,sqrt(x));
-}
+    double x;
+    printf("\nInsert your number: ");
+    scanf("%lf",&x);
+    printf("\nThe square root of %.1lf is %.1lf\n",x,sqrt(x));}
+void power(){
+    double x,y;
+    printf("\nFirst insert the base number and then the power: ");
+    scanf("%lf%lf",&x,&y);
+    printf("\nThe number %.1lf raise to the power of %.1lf is %.1lf\n",x,y,pow(x,y));}
