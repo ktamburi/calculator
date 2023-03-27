@@ -6,6 +6,8 @@
 void sum();
 void substraction();
 void multiplication();
+void division();
+void s_root();
 int main()
 {
     char operation;
@@ -30,6 +32,9 @@ int main()
         }
     else if(symbol==47){
         division();
+        }
+    else if(symbol==115){
+        s_root();
         }
     printf("\nThank you for using this calculator!");
     return 0;
@@ -56,3 +61,9 @@ void division(){
     scanf("%lf%lf",&x,&y);
     printf("\nThe division of %.1lf / %.1lf is %.1lf",x,y,x/y);
     printf("\nand the division of %.1lf / %.1lf is %.1lf\n",y,x,y/x);}
+void s_root(){
+        double x;
+        printf("\nInsert your number: ");
+        scanf("%lf",&x);
+        printf("\nThe square root of %.1lf is %.1lf\n",x,sqrt(x));
+}
