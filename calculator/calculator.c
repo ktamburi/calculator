@@ -9,6 +9,7 @@ void multiplication();
 void division();
 void s_root();
 void power();
+void avg();
 int main()
 {
     char operation;
@@ -19,6 +20,7 @@ int main()
     printf("\n4-Division of two numbers \"/\"");
     printf("\n5-Square root of a number \"s\"");
     printf("\n6-Power of a number \"^\"");
+    printf("\n7-Avarage \"a\"");
     printf("\nChoose the symbol of the operation you want to do: ");
     operation=getchar();
     int symbol=operation;
@@ -39,6 +41,9 @@ int main()
         }
     else if(symbol==94){
         power();
+        }
+    else if(symbol==97){
+        avg();
         }
     printf("\nThank you for using this calculator!");
     return 0;
@@ -75,3 +80,15 @@ void power(){
     printf("\nFirst insert the base number and then the power: ");
     scanf("%lf%lf",&x,&y);
     printf("\nThe number %.1lf raise to the power of %.1lf is %.1lf\n",x,y,pow(x,y));}
+void avg(){
+    int n=-1;
+    double sum=0,avarage,number;
+    printf("\nProgram will calculate the avarage of all the numbers you insert until you enter 0\n");
+    do{
+    scanf("%lf",&number);
+    sum+=number;
+    n++;
+    }while(number!=0);
+    avarage=(double)sum/n;
+    printf("The avarage of these %d numbers is %.1lf",n,avarage);
+}
