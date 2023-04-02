@@ -10,6 +10,8 @@ void division();
 void s_root();
 void power();
 void avg();
+void area();
+
 int main()
 {
     char operation;
@@ -21,6 +23,7 @@ int main()
     printf("\n5-Square root of a number \"s\"");
     printf("\n6-Power of a number \"^\"");
     printf("\n7-Avarage \"a\"");
+    printf("\n8-Area of rectangle \"r\"");
     printf("\nChoose the symbol of the operation you want to do: ");
     operation=getchar();
     int symbol=operation;
@@ -44,6 +47,9 @@ int main()
         }
     else if(symbol==97){
         avg();
+        }
+    else if(symbol==114){
+        area();
         }
     printf("\nThank you for using this calculator!");
     return 0;
@@ -91,4 +97,10 @@ void avg(){
     }while(number!=0);
     avarage=(double)sum/n;
     printf("The avarage of these %d numbers is %.1lf",n,avarage);
+}
+void area(){
+    int a,b;
+    printf("\nInsert lenght and width: ");
+    scanf("%d%d",&a,&b);
+    printf("Area of rectangle is: %d",a*b);
 }
